@@ -34,7 +34,6 @@ class GenerateBomSheet(object):
         worksheet = self.workbook.add_worksheet(self.finished_goods.item_name)
         caption = 'Finished Good List'
         worksheet.write('A1', caption)
-        
 
         get_options = lambda data: {
             'data': data, 

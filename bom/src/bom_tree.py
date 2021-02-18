@@ -47,7 +47,7 @@ class BomTree(GenerateBomSheet):
                 self.get_childs(child, bom_childs)
         return bom_childs
 
-    def generate_bom(self):
+    def generate_bom(self) -> None:
         # get all the nodes for which bom can be generated
         tree_mapping = self.get_childs(self.root, [])
 

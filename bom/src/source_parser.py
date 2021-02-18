@@ -23,8 +23,8 @@ class SourceParser(object):
 
     def get_finished_goods_generator(self) -> List[tuple]:
         """
-            Returns a list of generators to get the rows for a particular 
-            Item name. One generator per distinct `Item Name`
+            Returns a tuple containing the item name and generater
+            to get all the rows belonging to that item
         """
         return [(item, self.filter_rows(item)) for item in self.df['Item Name'].unique()]
 
