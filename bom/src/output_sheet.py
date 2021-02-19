@@ -49,6 +49,6 @@ class GenerateBomSheet(object):
 
         data = self.get_raw_materials_list_data()
         worksheet.write('A5', 'Raw Material List')
-        footer = len(data[0]) + 5
+        footer = len(data) + 6 # starting from next line from caption
         worksheet.add_table('A6:D%d' % footer, get_options(data))
         worksheet.write('A{}'.format(footer+1), 'End of Rw')
